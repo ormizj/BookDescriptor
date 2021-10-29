@@ -1,0 +1,9 @@
+•Create a Spring Boot application which manages books descriptors in files. 					                  |
+•Each descriptor has the following fields: book name, author name, description.					                  |*MY NOTE Model Entity: Descriptor -  long "id", String "bookName" (unique), String "authorName", String "description"
+•The application will store each descriptor in a separate file and will do the following:  			              |  
+
+1.Expose a rest endpoint for creating a new book descriptor							                              |*MY NOTE Controller: method to create a "Descriptor Entity"
+2.Expose a rest endpoint for getting a book descriptor by its name (let’s assume book name is unique).		      |*MY NOTE Controller: method to get    a "Descriptor Entity"
+3.(*) Expose a rest endpoint for updating a book descriptor 							                          |*MY NOTE Controller: method to update a "Descriptor Entity"
+4.The input to creating/updating the descriptor should be in a json format.					                      |*MY NOTE method (@RequestBody Descriptor descriptor) supports JSON
+5.The path to the directory, in which the files are saved, should be configured as a property and read via Spring |*MY NOTE add variable in application.properties
